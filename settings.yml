@@ -23,7 +23,8 @@ triggers:
 # ---------------------------
 
 # This is the STT that will be used by default
-default_speech_to_text: "google"
+#default_speech_to_text: "google"
+default_speech_to_text: "cmusphinx"
 
 # Speech to Text engines configuration
 # Available engine are:
@@ -34,6 +35,8 @@ default_speech_to_text: "google"
 # - houndify
 # - cmusphinx (must be installed first)
 speech_to_text:
+  - cmusphinx:
+      language: "fr-FR"
   - google:
       language: "fr-FR"
   - wit:
@@ -46,7 +49,7 @@ speech_to_text:
   - houndify:
       key: "fakekey" # example : "7zj90T7qAV74OYXk4X4vI2Xhk7wPsJu4aEZ0G5Ll-BMmV1JGtFpCxtSH9SmTY4G3bpEJ7a5y_GTQid-CAKI6vw=="
       client_id: "fakeclientid" # example : "lN4JXeaSticbSo9-llczbA=="
-  #- cmusphinx
+
 
 # ---------------------------
 # Text to speech

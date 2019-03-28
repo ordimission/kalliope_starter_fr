@@ -4,3 +4,23 @@
   neurons:
     - say:
         message: "Bonjour {{name}}"
+
+- name: "scan-doc-en"
+  signals:
+    - order: "scan this document"
+  neurons:
+    - shell:
+        cmd: "scanimage --format=png >/tmp/document.png"
+    - shell:
+        cmd: "gocr -i /tmp/document.png"
+        say_template: "{{ output }}"
+
+- name: "scan-doc-fr"
+  signals:
+    - order: "lis ce document"
+  neurons:
+    - shell:
+        cmd: "scanimage --format=png >/tmp/document.png"
+    - shell:
+        cmd: "gocr -i /tmp/document.png"
+        say_template: "{{ output }}"
