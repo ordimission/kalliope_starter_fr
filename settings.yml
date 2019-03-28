@@ -15,7 +15,7 @@ default_trigger: "snowboy"
 # - snowboy
 triggers:
   - snowboy:
-      pmdl_file: "trigger/kalliope-FR-90samples.pmdl"
+      pmdl_file: "trigger/amelie-FR-FDU.pmdl"
 
 
 # ---------------------------
@@ -142,7 +142,7 @@ resource_directory:
   neuron: "resources/neurons"
   stt: "resources/stt"
   tts: "resources/tts"
-  signal: "resources/signal"
+  signal: "resources/signals"
 #  trigger: "resources/trigger"
 #
 
